@@ -1,20 +1,27 @@
 #include "Rectangle.h"
 #include "Circle.h"
 #include "Shape.h"
+#include <vector>
+
 
 static void showShape(Shape& shape) {
 	shape.draw();
 }
 
 int main() {
+	unsigned int i;
+	vector<Shape*> shapeList;
+	Rectangle* rectanglePtr;
+	Circle* circlePtr;
 
-	Circle circle1;
-	Circle circle2(1.1);
-	showShape(circle1);
-	
-	Rectangle rectangle1;
-	Rectangle rectangle2(5, 2);
-	showShape(rectangle1);
+	rectanglePtr = new Rectangle;
+	circlePtr = new Circle;
+	shapeList.push_back(rectanglePtr);
+	shapeList.push_back(circlePtr);
+
+	for (i = 0; i < shapeList.size(); ++i) {
+		shapeList.at(i)->draw();
+	}
 
 	return 0;
 }
