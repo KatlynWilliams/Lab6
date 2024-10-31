@@ -1,15 +1,15 @@
 #pragma once
-#include "Shape.cpp";
+#include "Shape.h"
 
 class Circle: public Shape
 {
 private:
 	float radius;
 
-private:
+public:
 	Circle();
-	Circle(float radius);
-	float getArea();
-	void draw();
+	explicit Circle(float radius);
+	float getArea() const;
+	void draw() const override;
 };
 

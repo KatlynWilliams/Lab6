@@ -1,16 +1,16 @@
 #pragma once
-#include "Shape.cpp";
+#include "Shape.h"
 
 class Rectangle: public Shape
 {
-public:
+private:
 	int width;
 	int height;
 
-private:
+public:
 	Rectangle();
 	Rectangle(int width, int height);
-	void draw();
-	int getArea();
+	void draw() const override;
+	int getArea() const;
 };
 

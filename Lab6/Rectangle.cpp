@@ -1,7 +1,8 @@
 #include "Rectangle.h"
 
 Rectangle::Rectangle() {
-
+	width = 10;
+	height = 5;
 }
 
 Rectangle::Rectangle(int width, int height) {
@@ -9,10 +10,10 @@ Rectangle::Rectangle(int width, int height) {
 	this->height = height;
 }
 
-void Rectangle::draw() {
-
+void Rectangle::draw() const{
+	cout << "Drawing a rectangle." << endl;
 }
 
-int Rectangle::getArea() {
+int Rectangle::getArea() const{
 	return (width * height);
 }
